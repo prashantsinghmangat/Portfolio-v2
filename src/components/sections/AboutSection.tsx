@@ -28,50 +28,53 @@ const sidebarFiles = [
 
 const aboutCode = `<span class="code-kw">const</span> <span class="code-fn">developer</span> <span class="code-pun">=</span> <span class="code-pun">{</span>
   <span class="code-prop">name</span><span class="code-pun">:</span>       <span class="code-str">"Prashant Singh"</span><span class="code-pun">,</span>
-  <span class="code-prop">title</span><span class="code-pun">:</span>      <span class="code-str">"Senior Frontend Architect"</span><span class="code-pun">,</span>
-  <span class="code-prop">experience</span><span class="code-pun">:</span> <span class="code-str">"5+ years"</span><span class="code-pun">,</span>
+  <span class="code-prop">title</span><span class="code-pun">:</span>      <span class="code-str">"Module Lead | Frontend – AI & Migration"</span><span class="code-pun">,</span>
+  <span class="code-prop">experience</span><span class="code-pun">:</span> <span class="code-str">"6+ years"</span><span class="code-pun">,</span>
   <span class="code-prop">location</span><span class="code-pun">:</span>   <span class="code-str">"India 🇮🇳"</span><span class="code-pun">,</span>
   <span class="code-prop">expertise</span><span class="code-pun">:</span> <span class="code-pun">[</span>
-    <span class="code-str">"Frontend Architecture"</span><span class="code-pun">,</span>
-    <span class="code-str">"React Ecosystems"</span><span class="code-pun">,</span>
-    <span class="code-str">"AngularJS → React Migration"</span><span class="code-pun">,</span>
-    <span class="code-str">"UI Performance Engineering"</span><span class="code-pun">,</span>
-    <span class="code-str">"Enterprise Web Platforms"</span><span class="code-pun">,</span>
+    <span class="code-str">"Frontend Architecture & Leadership"</span><span class="code-pun">,</span>
+    <span class="code-str">"AngularJS → React Enterprise Migrations"</span><span class="code-pun">,</span>
+    <span class="code-str">"AI-Powered Dev Automation"</span><span class="code-pun">,</span>
+    <span class="code-str">"SEO & Performance Engineering"</span><span class="code-pun">,</span>
+    <span class="code-str">"Healthcare & Govt. Web Platforms"</span><span class="code-pun">,</span>
+    <span class="code-str">"Mobile: IONIC · Cordova · React Native"</span><span class="code-pun">,</span>
   <span class="code-pun">],</span>
   <span class="code-prop">achievements</span><span class="code-pun">:</span> <span class="code-pun">{</span>
-    <span class="code-prop">lcpImproved</span><span class="code-pun">:</span>    <span class="code-str">"4.2s → 1.8s"</span><span class="code-pun">,</span>
-    <span class="code-prop">bundleReduced</span><span class="code-pun">:</span>  <span class="code-str">"35% smaller"</span><span class="code-pun">,</span>
-    <span class="code-prop">teamMentored</span><span class="code-pun">:</span>   <span class="code-num">4</span><span class="code-pun">,</span>
-    <span class="code-prop">componentsBuilt</span><span class="code-pun">:</span> <span class="code-str">"60+"</span><span class="code-pun">,</span>
+    <span class="code-prop">devEffortSaved</span><span class="code-pun">:</span>  <span class="code-str">"40% via AI automation"</span><span class="code-pun">,</span>
+    <span class="code-prop">seoImproved</span><span class="code-pun">:</span>     <span class="code-str">"20% at Moglix/Credlix"</span><span class="code-pun">,</span>
+    <span class="code-prop">trafficGrowth</span><span class="code-pun">:</span>   <span class="code-str">"45% on Tendershark"</span><span class="code-pun">,</span>
+    <span class="code-prop">usersServed</span><span class="code-pun">:</span>     <span class="code-str">"100,000+ on Tele-MANAS"</span><span class="code-pun">,</span>
+    <span class="code-prop">award</span><span class="code-pun">:</span>           <span class="code-str">"Pratibha Top Performance Q2 @ Moglix"</span><span class="code-pun">,</span>
   <span class="code-pun">},</span>
+  <span class="code-prop">education</span><span class="code-pun">:</span>  <span class="code-str">"B.Tech CSE · LPU 2020"</span><span class="code-pun">,</span>
   <span class="code-prop">openToWork</span><span class="code-pun">:</span> <span class="code-num">true</span><span class="code-pun">,</span>
 <span class="code-pun">};</span>`;
 
 const skillsCode = `<span class="code-kw">interface</span> <span class="code-fn">TechStack</span> <span class="code-pun">{</span>
   <span class="code-prop">frontend</span><span class="code-pun">:</span> <span class="code-fn">string</span><span class="code-pun">[];</span>
   <span class="code-prop">backend</span><span class="code-pun">:</span> <span class="code-fn">string</span><span class="code-pun">[];</span>
+  <span class="code-prop">mobile</span><span class="code-pun">:</span> <span class="code-fn">string</span><span class="code-pun">[];</span>
   <span class="code-prop">tools</span><span class="code-pun">:</span> <span class="code-fn">string</span><span class="code-pun">[];</span>
-  <span class="code-prop">testing</span><span class="code-pun">:</span> <span class="code-fn">string</span><span class="code-pun">[];</span>
 <span class="code-pun">}</span>
 
 <span class="code-kw">const</span> <span class="code-fn">stack</span><span class="code-pun">:</span> <span class="code-fn">TechStack</span> <span class="code-pun">=</span> <span class="code-pun">{</span>
   <span class="code-prop">frontend</span><span class="code-pun">:</span> <span class="code-pun">[</span>
-    <span class="code-str">"React"</span><span class="code-pun">,</span> <span class="code-str">"Next.js"</span><span class="code-pun">,</span> <span class="code-str">"Angular"</span><span class="code-pun">,</span>
-    <span class="code-str">"TypeScript"</span><span class="code-pun">,</span> <span class="code-str">"Tailwind CSS"</span><span class="code-pun">,</span>
-    <span class="code-str">"Framer Motion"</span><span class="code-pun">,</span> <span class="code-str">"GSAP"</span><span class="code-pun">,</span>
+    <span class="code-str">"Angular"</span><span class="code-pun">,</span> <span class="code-str">"React"</span><span class="code-pun">,</span> <span class="code-str">"Next.js"</span><span class="code-pun">,</span>
+    <span class="code-str">"TypeScript"</span><span class="code-pun">,</span> <span class="code-str">"JavaScript"</span><span class="code-pun">,</span>
+    <span class="code-str">"SSR"</span><span class="code-pun">,</span> <span class="code-str">"Figma"</span><span class="code-pun">,</span> <span class="code-str">"SEO"</span><span class="code-pun">,</span>
   <span class="code-pun">],</span>
   <span class="code-prop">backend</span><span class="code-pun">:</span> <span class="code-pun">[</span>
-    <span class="code-str">"Node.js"</span><span class="code-pun">,</span> <span class="code-str">"Express"</span><span class="code-pun">,</span>
-    <span class="code-str">"GraphQL"</span><span class="code-pun">,</span> <span class="code-str">"REST APIs"</span><span class="code-pun">,</span>
-    <span class="code-str">"MongoDB"</span><span class="code-pun">,</span> <span class="code-str">"PostgreSQL"</span><span class="code-pun">,</span>
+    <span class="code-str">"REST APIs"</span><span class="code-pun">,</span> <span class="code-str">"Node.js"</span><span class="code-pun">,</span>
+    <span class="code-str">"Java"</span><span class="code-pun">,</span> <span class="code-str">"WordPress"</span><span class="code-pun">,</span>
+  <span class="code-pun">],</span>
+  <span class="code-prop">mobile</span><span class="code-pun">:</span> <span class="code-pun">[</span>
+    <span class="code-str">"IONIC"</span><span class="code-pun">,</span> <span class="code-str">"Cordova"</span><span class="code-pun">,</span>
+    <span class="code-str">"React Native"</span><span class="code-pun">,</span> <span class="code-str">"Android"</span><span class="code-pun">,</span>
   <span class="code-pun">],</span>
   <span class="code-prop">tools</span><span class="code-pun">:</span> <span class="code-pun">[</span>
-    <span class="code-str">"Docker"</span><span class="code-pun">,</span> <span class="code-str">"Git"</span><span class="code-pun">,</span> <span class="code-str">"CI/CD"</span><span class="code-pun">,</span>
-    <span class="code-str">"Vite"</span><span class="code-pun">,</span> <span class="code-str">"Webpack"</span><span class="code-pun">,</span>
-  <span class="code-pun">],</span>
-  <span class="code-prop">testing</span><span class="code-pun">:</span> <span class="code-pun">[</span>
-    <span class="code-str">"Jest"</span><span class="code-pun">,</span> <span class="code-str">"Vitest"</span><span class="code-pun">,</span>
-    <span class="code-str">"Cypress"</span><span class="code-pun">,</span> <span class="code-str">"Testing Library"</span><span class="code-pun">,</span>
+    <span class="code-str">"Git"</span><span class="code-pun">,</span> <span class="code-str">"Jenkins"</span><span class="code-pun">,</span> <span class="code-str">"Webpack"</span><span class="code-pun">,</span>
+    <span class="code-str">"Postman"</span><span class="code-pun">,</span> <span class="code-str">"Agile"</span><span class="code-pun">,</span>
+    <span class="code-str">"AI Automation (Claude / GPT)"</span><span class="code-pun">,</span>
   <span class="code-pun">],</span>
 <span class="code-pun">};</span>`;
 

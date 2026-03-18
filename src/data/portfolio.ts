@@ -10,9 +10,23 @@ export interface Experience {
   period: string;
   role: string;
   company: string;
+  companyDesc: string;
   color: string;
   points: string[];
   tags: string[];
+}
+
+export interface Education {
+  degree: string;
+  institution: string;
+  period: string;
+  location: string;
+}
+
+export interface Certification {
+  name: string;
+  issuer: string;
+  year: string;
 }
 
 export interface Project {
@@ -47,9 +61,12 @@ export interface TerminalCommand {
 
 export const personalInfo = {
   name: "Prashant Singh",
-  title: "Senior Frontend Architect & Full Stack Developer",
-  shortTitle: "Senior Frontend Architect",
-  experience: "5+",
+  title: "Senior Web Application Developer & Frontend Architect",
+  shortTitle: "Module Lead | Frontend – AI & Migration Specialist",
+  tagline: "Senior Web Application Developer | Agile Methodologies | Front-End Expertise",
+  summary:
+    "Experienced Senior Frontend Engineer skilled in full-stack development, API integration, and Agile methodologies. Proficient in Angular, ReactJS, Next.js, JavaScript, TypeScript, and modern DevOps practices. Expert in building scalable, high-performance web applications with a focus on UI/UX optimization, SEO, and cloud solutions.",
+  experience: "6+",
   location: "India",
   email: "prashantsinghmangat@gmail.com",
   github: "https://github.com/prashantsinghmangat",
@@ -57,75 +74,112 @@ export const personalInfo = {
   portfolio: "https://prashantsinghmangat.netlify.app",
   npm: "https://www.npmjs.com/package/tracebug-sdk",
   stats: [
-    { label: "Years Exp", value: 5, suffix: "+" },
+    { label: "Years Exp", value: 6, suffix: "+" },
     { label: "Features Shipped", value: 50, suffix: "+" },
     { label: "Projects Built", value: 35, suffix: "+" },
   ],
   typingStrings: [
     "High-Performance UIs",
     "Scalable React Architectures",
-    "Full Stack Solutions",
+    "AI-Powered Automations",
     "Enterprise Web Platforms",
-    "Developer Experiences",
+    "Angular → React Migrations",
+    "Full Stack Solutions",
   ],
-  floatingTechs: ["React", "Next.js", "Angular", "TypeScript", "Node.js"],
+  floatingTechs: ["React", "Next.js", "Angular", "TypeScript", "AI Tools"],
 } as const;
 
 export const skills: Skill[] = [
   { name: "React", icon: "⚛️", years: "5+", level: 95, category: "frontend" },
-  { name: "Next.js", icon: "▲", years: "4+", level: 92, category: "frontend" },
-  { name: "Angular", icon: "🅰️", years: "4+", level: 88, category: "frontend" },
-  { name: "TypeScript", icon: "🔷", years: "4+", level: 93, category: "frontend" },
-  { name: "Tailwind CSS", icon: "🎨", years: "3+", level: 90, category: "frontend" },
-  { name: "Framer Motion", icon: "✨", years: "3+", level: 85, category: "frontend" },
-  { name: "Node.js", icon: "🟢", years: "4+", level: 85, category: "backend" },
-  { name: "Express.js", icon: "🔧", years: "4+", level: 83, category: "backend" },
-  { name: "GraphQL", icon: "🔺", years: "3+", level: 78, category: "backend" },
-  { name: "REST APIs", icon: "🔗", years: "5+", level: 90, category: "backend" },
-  { name: "Docker", icon: "🐳", years: "3+", level: 80, category: "tools" },
-  { name: "Git", icon: "📦", years: "5+", level: 95, category: "tools" },
-  { name: "CI/CD", icon: "🔄", years: "3+", level: 82, category: "tools" },
-  { name: "Vite", icon: "⚡", years: "3+", level: 88, category: "tools" },
+  { name: "Angular", icon: "🅰️", years: "6+", level: 92, category: "frontend" },
+  { name: "Next.js", icon: "▲", years: "4+", level: 90, category: "frontend" },
+  { name: "TypeScript", icon: "🔷", years: "5+", level: 93, category: "frontend" },
+  { name: "JavaScript", icon: "🟡", years: "6+", level: 95, category: "frontend" },
+  { name: "HTML / CSS", icon: "🎨", years: "6+", level: 95, category: "frontend" },
+  { name: "SSR", icon: "🖥️", years: "3+", level: 88, category: "frontend" },
+  { name: "Figma / UI-UX", icon: "🖌️", years: "4+", level: 82, category: "frontend" },
+  { name: "IONIC / Cordova", icon: "📱", years: "3+", level: 78, category: "frontend" },
+  { name: "React Native", icon: "📲", years: "2+", level: 75, category: "frontend" },
+  { name: "REST APIs", icon: "🔗", years: "6+", level: 92, category: "backend" },
+  { name: "Node.js", icon: "🟢", years: "4+", level: 82, category: "backend" },
+  { name: "Java", icon: "☕", years: "3+", level: 72, category: "backend" },
+  { name: "WordPress", icon: "🌐", years: "3+", level: 75, category: "backend" },
+  { name: "Git", icon: "📦", years: "6+", level: 95, category: "tools" },
+  { name: "Webpack", icon: "📦", years: "4+", level: 85, category: "tools" },
+  { name: "Jenkins / CI-CD", icon: "🔄", years: "3+", level: 80, category: "tools" },
+  { name: "AI Automation", icon: "🤖", years: "2+", level: 85, category: "tools" },
+  { name: "SEO Optimization", icon: "🔍", years: "3+", level: 82, category: "tools" },
+  { name: "Postman", icon: "📬", years: "5+", level: 88, category: "tools" },
+  { name: "Agile / Scrum", icon: "🏃", years: "5+", level: 90, category: "tools" },
 ];
 
 export const experiences: Experience[] = [
   {
-    period: "2022 — Present",
-    role: "Senior Frontend Engineer",
+    period: "Aug 2025 — Present",
+    role: "Module Lead | Frontend – AI & Migration Specialist",
     company: "Taazaa Inc.",
+    companyDesc:
+      "Taazaa is your single source for technology solutions — from AI to consulting, design, engineering, systems integration, and support.",
     color: "#7c6cfc",
     points: [
-      "Led architecture of enterprise-scale React platforms",
-      "Spearheaded complete AngularJS → React migration (bundle -35%)",
-      "Improved LCP from 4.2s → 1.8s, CLS from 0.3 → 0.05",
-      "Built design system with 60+ components for 10+ teams",
-      "Mentored 4 junior developers",
+      "Led enterprise-level AngularJS → React migration ensuring full UI and business logic parity without production disruption.",
+      "Upgraded legacy Angular applications to modern Angular architecture using TypeScript and modular component design.",
+      "Built centralized React UI component library (buttons, tables, forms, dialogs, cards) for scalable shell architecture.",
+      "Automated route migration, parity validation, and testing workflows using AI tools (Claude Code, GPT), reducing development effort by 40%.",
+      "Implemented AI-powered PR review workflows to detect logic issues, security gaps, and code readability improvements.",
+      "Standardized frontend architecture and development practices for scalable modernization initiatives.",
     ],
-    tags: ["React", "Next.js", "TypeScript", "Performance", "Design Systems"],
+    tags: ["AngularJS", "React", "TypeScript", "AI Automation", "SSR", "CI/CD", ".Net"],
   },
   {
-    period: "2020 — 2022",
-    role: "Frontend Developer",
-    company: "Product Company",
+    period: "Apr 2024 — Aug 2025",
+    role: "Senior Frontend Developer",
+    company: "Moglix (Moglix.com, Credlix.com)",
+    companyDesc:
+      "Moglix is an Indian e-commerce company headquartered in Singapore, established in 2015. Operates in India, USA, UK, and Europe.",
     color: "#22d3ee",
     points: [
-      "Built real-time data visualization dashboards (D3.js, Chart.js)",
-      "Developed reusable Angular component library",
-      "Integrated REST & GraphQL APIs",
+      "Developed and optimized Credlix.com using ReactJS and Next.js, improving SEO rankings by 20% and page load speed by 15%.",
+      "Led Tendershark.com end-to-end with Angular SSR, enhancing UI and increasing traffic by 45%.",
+      "Revamped Moglix.com L2/L3 pages using Angular and TypeScript, integrating responsive widgets with RESTful APIs for a 30% UX improvement.",
+      "Built and maintained Shield Finance, Credlix Exim, and domestic platforms.",
+      "Contributed to DigiMRO using ReactJS and NextJS.",
+      "Awarded Top Performance Pratibha Award in tech team for Q2.",
     ],
-    tags: ["Angular", "RxJS", "GraphQL", "D3.js", "SASS"],
+    tags: ["Angular SSR", "React", "Next.js", "Webpack", "REST APIs", "Jenkins", "Agile", "SEO"],
   },
   {
-    period: "2019 — 2020",
-    role: "Junior Frontend Developer",
-    company: "Tech Startup",
+    period: "Oct 2019 — Apr 2024",
+    role: "Full-Stack Developer",
+    company: "E-Health Research Center, IIIT-B",
+    companyDesc:
+      "The E-Health Research Center @ IIIT-B is an interdisciplinary research center spanning all areas of research to meet healthcare needs.",
     color: "#4ade80",
     points: [
-      "Delivered 15+ responsive React interfaces",
-      "Collaborated with designers for pixel-perfect output",
+      "Developed the frontend of Let's Talk Life (NIMHANS) using Angular 17 and Figma, enhancing accessibility by 40% with responsive design.",
+      "Created the Tele-MANAS frontend (government initiative) with Angular 16, supporting 100,000+ users.",
+      "Integrated ABHA card into e-Manas (Karnataka Govt.), ensuring secure authentication for 10,000+ records.",
+      "Contributed to MHMS, MOSIP, and COVID-19 Mental Health projects using Angular, backend, and Android.",
     ],
-    tags: ["React", "JavaScript", "CSS3", "Webpack"],
+    tags: ["Angular", "TypeScript", "Figma", "Android", "IONIC", "REST APIs", "Java"],
   },
+];
+
+export const education: Education[] = [
+  {
+    degree: "B.Tech. in Computer Science & Engineering",
+    institution: "Lovely Professional University",
+    period: "Aug 2016 – Aug 2020",
+    location: "Phagwara, Punjab",
+  },
+];
+
+export const certifications: Certification[] = [
+  { name: "ReactJS and Angular", issuer: "Udemy", year: "2024" },
+  { name: "Ethical Hacking", issuer: "TechDefence", year: "2021" },
+  { name: "Ethical Hacking", issuer: "Lucideus", year: "2021" },
+  { name: "Digital Marketing", issuer: "Internshala", year: "2020" },
+  { name: "C++, HTML, CSS", issuer: "SoloLearn", year: "2019" },
 ];
 
 export const projects: Project[] = [
@@ -297,30 +351,30 @@ export const terminalCommands: Record<string, TerminalCommand> = {
     lines: [
       { text: "→ Prashant Singh", type: "header" },
       { text: "", type: "normal" },
-      { text: "  Senior Frontend Architect & Full Stack Developer", type: "info" },
-      { text: "  India · 5+ years · Open to Senior / Lead roles", type: "normal" },
+      { text: "  Module Lead | Frontend – AI & Migration Specialist", type: "info" },
+      { text: "  India · 6+ years · Open to Senior / Lead / Architect roles", type: "normal" },
       { text: "", type: "normal" },
-      { text: "  I build scalable frontend systems.", type: "success" },
-      { text: "  I optimize for performance — LCP 4.2s → 1.8s.", type: "success" },
-      { text: "  I migrate legacy apps — AngularJS → React (-35% bundle).", type: "success" },
-      { text: "  I think in architecture, not just components.", type: "success" },
+      { text: "  I build scalable frontend systems — React, Angular, Next.js.", type: "success" },
+      { text: "  I automate workflows with AI tools — 40% dev effort saved.", type: "success" },
+      { text: "  I migrate legacy apps — AngularJS → React at enterprise scale.", type: "success" },
+      { text: "  I own the architecture and ship production-grade code.", type: "success" },
     ],
   },
   "hire-me": {
     lines: [
       { text: "→ Why Hire Prashant?", type: "header" },
       { text: "", type: "normal" },
-      { text: "  ① I ship production-grade systems, not prototypes", type: "success" },
-      { text: "     50+ features shipped · 35+ public repos · 0 prod fires", type: "normal" },
+      { text: "  ① I ship production-grade systems across enterprise scale", type: "success" },
+      { text: "     Moglix · Tendershark · Tele-MANAS (100K+ users) · e-Manas", type: "normal" },
       { text: "", type: "normal" },
-      { text: "  ② I optimize for real performance gains", type: "success" },
-      { text: "     LCP 4.2s→1.8s · CLS 0.3→0.05 · Bundle -35%", type: "normal" },
+      { text: "  ② I drive measurable impact with every release", type: "success" },
+      { text: "     SEO +20% · Traffic +45% · UX +30% · Dev effort -40% via AI", type: "normal" },
       { text: "", type: "normal" },
-      { text: "  ③ I build teams, not just features", type: "success" },
-      { text: "     60+ component design system · 4 devs mentored", type: "normal" },
+      { text: "  ③ I lead teams and modernize legacy systems", type: "success" },
+      { text: "     AngularJS → React migrations · centralized component libraries", type: "normal" },
       { text: "", type: "normal" },
-      { text: "  ④ I own the architecture end-to-end", type: "success" },
-      { text: "     React · Next.js · Angular · Node.js · TypeScript", type: "normal" },
+      { text: "  ④ I bring AI to real development workflows", type: "success" },
+      { text: "     Claude Code · GPT · AI-powered PR reviews · automated testing", type: "normal" },
       { text: "", type: "normal" },
       { text: "  ✉  prashantsinghmangat@gmail.com", type: "warn" },
       { text: "  💼 linkedin.com/in/prashantsinghmangat", type: "warn" },
@@ -381,12 +435,14 @@ export const terminalCommands: Record<string, TerminalCommand> = {
     lines: [
       { text: "→ About Prashant Singh", type: "header" },
       { text: "", type: "normal" },
-      { text: "  Role:     Senior Frontend Architect & Full Stack Developer", type: "info" },
-      { text: "  Exp:      5+ years building enterprise web platforms", type: "normal" },
-      { text: "  Stack:    React · Next.js · Angular · TypeScript · Node.js", type: "info" },
-      { text: "  Special:  AngularJS → React migrations at scale", type: "warn" },
+      { text: "  Role:     Module Lead | Frontend – AI & Migration Specialist", type: "info" },
+      { text: "  Exp:      6+ years building enterprise web & mobile platforms", type: "normal" },
+      { text: "  Stack:    React · Angular · Next.js · TypeScript · IONIC · Android", type: "info" },
+      { text: "  AI:       Claude Code · GPT · automated PR reviews & migrations", type: "warn" },
+      { text: "  Edu:      B.Tech CSE · Lovely Professional University (2020)", type: "normal" },
       { text: "  Repos:    35 public repositories on GitHub", type: "normal" },
-      { text: "  Status:   ✓ Open to Senior Frontend opportunities", type: "success" },
+      { text: "  Award:    Top Performance Pratibha Award Q2 @ Moglix", type: "warn" },
+      { text: "  Status:   ✓ Open to Senior / Lead / Architect roles", type: "success" },
     ],
   },
   projects: {
@@ -450,14 +506,14 @@ export const terminalCommands: Record<string, TerminalCommand> = {
     lines: [
       { text: "→ Career Timeline", type: "header" },
       { text: "", type: "normal" },
-      { text: "  2022 — Now   Senior Frontend Engineer @ Taazaa Inc.", type: "info" },
-      { text: "               Led React architecture & AngularJS migration", type: "normal" },
+      { text: "  Aug 2025 — Now   Module Lead | AI & Migration @ Taazaa Inc.", type: "info" },
+      { text: "                   AngularJS→React migration · AI workflows · -40% dev effort", type: "normal" },
       { text: "", type: "normal" },
-      { text: "  2020 — 2022  Frontend Developer @ Product Company", type: "warn" },
-      { text: "               Data visualization dashboards & Angular libs", type: "normal" },
+      { text: "  Apr 2024 — Aug 2025  Senior Frontend Dev @ Moglix", type: "warn" },
+      { text: "                       Credlix · Tendershark · Moglix L2/L3 · Pratibha Award", type: "normal" },
       { text: "", type: "normal" },
-      { text: "  2019 — 2020  Junior Frontend Developer @ Tech Startup", type: "success" },
-      { text: "               15+ responsive React interfaces", type: "normal" },
+      { text: "  Oct 2019 — Apr 2024  Full-Stack Dev @ E-Health Research Center, IIIT-B", type: "success" },
+      { text: "                       Tele-MANAS · e-Manas · LetsTalk Life · MOSIP", type: "normal" },
     ],
   },
   contact: {

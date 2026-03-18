@@ -1,8 +1,6 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const siteUrl = "https://prashantsingh.dev";
-
   return {
     rules: [
       {
@@ -10,6 +8,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: `${siteUrl}/sitemap.xml`,
+    sitemap: "https://prashantsingh.dev/sitemap.xml",
+    host: "https://prashantsingh.dev",
   };
 }
