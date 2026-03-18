@@ -293,6 +293,90 @@ export const industryProjects: IndustryProject[] = [
 ];
 
 export const terminalCommands: Record<string, TerminalCommand> = {
+  whoami: {
+    lines: [
+      { text: "→ Prashant Singh", type: "header" },
+      { text: "", type: "normal" },
+      { text: "  Senior Frontend Architect & Full Stack Developer", type: "info" },
+      { text: "  India · 5+ years · Open to Senior / Lead roles", type: "normal" },
+      { text: "", type: "normal" },
+      { text: "  I build scalable frontend systems.", type: "success" },
+      { text: "  I optimize for performance — LCP 4.2s → 1.8s.", type: "success" },
+      { text: "  I migrate legacy apps — AngularJS → React (-35% bundle).", type: "success" },
+      { text: "  I think in architecture, not just components.", type: "success" },
+    ],
+  },
+  "hire-me": {
+    lines: [
+      { text: "→ Why Hire Prashant?", type: "header" },
+      { text: "", type: "normal" },
+      { text: "  ① I ship production-grade systems, not prototypes", type: "success" },
+      { text: "     50+ features shipped · 35+ public repos · 0 prod fires", type: "normal" },
+      { text: "", type: "normal" },
+      { text: "  ② I optimize for real performance gains", type: "success" },
+      { text: "     LCP 4.2s→1.8s · CLS 0.3→0.05 · Bundle -35%", type: "normal" },
+      { text: "", type: "normal" },
+      { text: "  ③ I build teams, not just features", type: "success" },
+      { text: "     60+ component design system · 4 devs mentored", type: "normal" },
+      { text: "", type: "normal" },
+      { text: "  ④ I own the architecture end-to-end", type: "success" },
+      { text: "     React · Next.js · Angular · Node.js · TypeScript", type: "normal" },
+      { text: "", type: "normal" },
+      { text: "  ✉  prashantsinghmangat@gmail.com", type: "warn" },
+      { text: "  💼 linkedin.com/in/prashantsinghmangat", type: "warn" },
+    ],
+  },
+  "open github": {
+    lines: [
+      { text: "→ Opening GitHub...", type: "info" },
+      { text: "  🐙 github.com/prashantsinghmangat", type: "success" },
+      { text: "  (link opened in new tab)", type: "normal" },
+    ],
+  },
+  "open linkedin": {
+    lines: [
+      { text: "→ Opening LinkedIn...", type: "info" },
+      { text: "  💼 linkedin.com/in/prashantsinghmangat", type: "success" },
+      { text: "  (link opened in new tab)", type: "normal" },
+    ],
+  },
+  "open npm": {
+    lines: [
+      { text: "→ Opening npm...", type: "info" },
+      { text: "  📦 npmjs.com/package/tracebug-sdk", type: "success" },
+      { text: "  (link opened in new tab)", type: "normal" },
+    ],
+  },
+  "theme default": {
+    lines: [{ text: "✓ Theme set to Default (purple)", type: "success" }],
+  },
+  "theme cyberpunk": {
+    lines: [{ text: "✓ Theme set to Cyberpunk (neon)", type: "success" }],
+  },
+  "theme minimal": {
+    lines: [{ text: "✓ Theme set to Minimal (light)", type: "success" }],
+  },
+  "theme matrix": {
+    lines: [{ text: "✓ Theme set to Matrix (green)", type: "success" }],
+  },
+  "goto hero": {
+    lines: [{ text: "✓ Navigating to Hero section...", type: "success" }],
+  },
+  "goto about": {
+    lines: [{ text: "✓ Navigating to About section...", type: "success" }],
+  },
+  "goto projects": {
+    lines: [{ text: "✓ Navigating to Projects section...", type: "success" }],
+  },
+  "goto skills": {
+    lines: [{ text: "✓ Navigating to Skills section...", type: "success" }],
+  },
+  "goto experience": {
+    lines: [{ text: "✓ Navigating to Experience section...", type: "success" }],
+  },
+  "goto contact": {
+    lines: [{ text: "✓ Navigating to Contact section...", type: "success" }],
+  },
   about: {
     lines: [
       { text: "→ About Prashant Singh", type: "header" },
@@ -390,13 +474,28 @@ export const terminalCommands: Record<string, TerminalCommand> = {
     lines: [
       { text: "→ Available Commands", type: "header" },
       { text: "", type: "normal" },
-      { text: "  about       — Who is Prashant?", type: "info" },
-      { text: "  projects    — View all projects", type: "info" },
-      { text: "  skills      — Skill levels & proficiency", type: "info" },
-      { text: "  experience  — Career timeline", type: "info" },
-      { text: "  contact     — Get in touch", type: "info" },
-      { text: "  clear       — Clear terminal", type: "info" },
-      { text: "  help        — Show this menu", type: "info" },
+      { text: "  about              — Who is Prashant?", type: "info" },
+      { text: "  whoami             — Quick identity card", type: "info" },
+      { text: "  hire-me            — Why you should hire him", type: "info" },
+      { text: "  projects           — View all projects", type: "info" },
+      { text: "  skills             — Skill levels & proficiency", type: "info" },
+      { text: "  experience         — Career timeline", type: "info" },
+      { text: "  contact            — Get in touch", type: "info" },
+      { text: "", type: "normal" },
+      { text: "  open github        — Open GitHub profile", type: "warn" },
+      { text: "  open linkedin      — Open LinkedIn profile", type: "warn" },
+      { text: "  open npm           — Open npm package", type: "warn" },
+      { text: "", type: "normal" },
+      { text: "  goto <section>     — Scroll to section", type: "success" },
+      { text: "    sections: hero · about · projects · skills · experience · contact", type: "normal" },
+      { text: "", type: "normal" },
+      { text: "  theme <name>       — Switch theme", type: "success" },
+      { text: "    themes: default · cyberpunk · minimal · matrix", type: "normal" },
+      { text: "", type: "normal" },
+      { text: "  clear              — Clear terminal", type: "info" },
+      { text: "  help               — Show this menu", type: "info" },
+      { text: "", type: "normal" },
+      { text: "  Tip: Press Tab to autocomplete commands", type: "normal" },
     ],
   },
 };

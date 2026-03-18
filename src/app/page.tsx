@@ -3,6 +3,7 @@ import TerminalSection from "@/components/sections/TerminalSection";
 import AboutSection from "@/components/sections/AboutSection";
 import SkillGalaxySection from "@/components/sections/SkillGalaxySection";
 import ExperienceSection from "@/components/sections/ExperienceSection";
+import WhyHireMeSection from "@/components/sections/WhyHireMeSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import OpenSourceSection from "@/components/sections/OpenSourceSection";
 import GithubSection from "@/components/sections/GithubSection";
@@ -22,6 +23,7 @@ export default function Home() {
           <AboutSection />
           <SkillGalaxySection />
           <ExperienceSection />
+          <WhyHireMeSection />
           <ProjectsSection />
           <OpenSourceSection />
           <GithubSection />

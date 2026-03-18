@@ -4,7 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* ── Default theme (purple on dark) ─────────────────────────── */
+:root,
+[data-theme="default"] {
   --bg: #050509;
   --bg2: #0a0a12;
   --surface: rgba(255, 255, 255, 0.04);
@@ -13,6 +15,60 @@
   --accent2: #a78bfa;
   --cyan: #22d3ee;
   --green: #4ade80;
+  --text: #e4e4e7;
+  --text-muted: #71717a;
+  --scanlines: none;
+}
+
+/* ── Cyberpunk theme (hot-pink / neon-yellow on near-black) ─── */
+[data-theme="cyberpunk"] {
+  --bg: #04000a;
+  --bg2: #0c0014;
+  --surface: rgba(255, 0, 110, 0.05);
+  --border: rgba(255, 0, 110, 0.15);
+  --accent: #ff006e;
+  --accent2: #ffbe0b;
+  --cyan: #00f5d4;
+  --green: #00f5d4;
+  --text: #fff0f8;
+  --text-muted: #a07090;
+  --scanlines: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 0, 110, 0.03) 2px,
+    rgba(255, 0, 110, 0.03) 4px
+  );
+}
+
+/* ── Minimal theme (light, clean) ───────────────────────────── */
+[data-theme="minimal"] {
+  --bg: #f5f5fc;
+  --bg2: #ebebf8;
+  --surface: rgba(0, 0, 0, 0.04);
+  --border: rgba(0, 0, 0, 0.10);
+  --accent: #6c47ff;
+  --accent2: #9f7dff;
+  --cyan: #0ea5e9;
+  --green: #16a34a;
+  --text: #18181b;
+  --text-muted: #52525b;
+  --scanlines: none;
+}
+
+/* ── Matrix theme (green on black) ──────────────────────────── */
+[data-theme="matrix"] {
+  --bg: #000300;
+  --bg2: #001500;
+  --surface: rgba(0, 255, 65, 0.04);
+  --border: rgba(0, 255, 65, 0.12);
+  --accent: #00ff41;
+  --accent2: #00cc33;
+  --cyan: #00ff41;
+  --green: #00ff41;
+  --text: #c8ffc8;
+  --text-muted: #4d9944;
+  --scanlines: none;
 }
 
 * {
@@ -25,9 +81,20 @@ html {
 
 body {
   background: var(--bg);
-  color: #e4e4e7;
+  color: var(--text);
   font-family: 'Space Grotesk', system-ui, sans-serif;
   overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Scanline overlay for cyberpunk */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: var(--scanlines);
+  pointer-events: none;
+  z-index: 9998;
 }
 
 ::selection {
@@ -52,14 +119,14 @@ body {
 /* Utility Classes */
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(135deg, #ffffff 0%, #7c6cfc 50%, #22d3ee 100%);
+    background: linear-gradient(135deg, var(--text) 0%, var(--accent) 50%, var(--cyan) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-gradient-accent {
-    background: linear-gradient(135deg, #7c6cfc 0%, #22d3ee 100%);
+    background: linear-gradient(135deg, var(--accent) 0%, var(--cyan) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -69,6 +136,22 @@ body {
     backdrop-filter: blur(20px);
     background: var(--surface);
     border: 1px solid var(--border);
+  }
+
+  .theme-bg {
+    background: var(--bg);
+  }
+
+  .theme-bg2 {
+    background: var(--bg2);
+  }
+
+  .theme-accent {
+    color: var(--accent);
+  }
+
+  .theme-border {
+    border-color: var(--border);
   }
 }
 

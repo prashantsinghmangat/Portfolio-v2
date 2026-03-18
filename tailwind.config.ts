@@ -15,12 +15,12 @@ const config: Config = {
       },
       colors: {
         bg: {
-          DEFAULT: "#050509",
-          2: "#0a0a12",
+          DEFAULT: "var(--bg)",
+          2: "var(--bg2)",
         },
         accent: {
-          DEFAULT: "#7c6cfc",
-          2: "#a78bfa",
+          DEFAULT: "var(--accent)",
+          2: "var(--accent2)",
         },
       },
       animation: {

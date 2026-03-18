@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { useUIStore } from "@/store/uiStore";
 
 interface Particle {
   x: number;
@@ -14,6 +15,7 @@ interface Particle {
 
 export default function ParticleCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const performanceMode = useUIStore((s) => s.performanceMode);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -25,7 +27,11 @@ export default function ParticleCanvas() {
     let animationId: number;
     let particles: Particle[] = [];
 
-    const colors = ["#7c6cfc", "#22d3ee"];
+    const getColors = () => {
+      const accent = getComputedStyle(document.documentElement).getPropertyValue("--accent").trim() || "#7c6cfc";
+      const cyan = getComputedStyle(document.documentElement).getPropertyValue("--cyan").trim() || "#22d3ee";
+      return [accent, cyan];
+    };
 
     const resize = () => {
       canvas.width = canvas.offsetWidth;
@@ -34,7 +40,9 @@ export default function ParticleCanvas() {
     };
 
     const initParticles = () => {
-      const count = Math.min(150, Math.floor((canvas.width * canvas.height) / 7000));
+      const colors = getColors();
+      const maxCount = performanceMode ? 50 : 150;
+      const count = Math.min(maxCount, Math.floor((canvas.width * canvas.height) / 7000));
       particles = Array.from({ length: count }, () => ({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
@@ -46,8 +54,12 @@ export default function ParticleCanvas() {
       }));
     };
 
+    const connectionDistance = performanceMode ? 70 : 110;
+
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      const accent = getComputedStyle(document.documentElement).getPropertyValue("--accent").trim() || "#7c6cfc";
 
       particles.forEach((p) => {
         p.x += p.vx;
@@ -63,21 +75,22 @@ export default function ParticleCanvas() {
         ctx.fill();
       });
 
-      // Draw connections
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
+      if (!performanceMode) {
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
 
-          if (dist < 110) {
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = "#7c6cfc";
-            ctx.globalAlpha = (1 - dist / 110) * 0.15;
-            ctx.lineWidth = 0.5;
-            ctx.stroke();
+            if (dist < connectionDistance) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = accent;
+              ctx.globalAlpha = (1 - dist / connectionDistance) * 0.15;
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
           }
         }
       }
@@ -94,7 +107,7 @@ export default function ParticleCanvas() {
       cancelAnimationFrame(animationId);
       window.removeEventListener("resize", resize);
     };
-  }, []);
+  }, [performanceMode]);
 
   return (
     <canvas

@@ -3,6 +3,9 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import CustomCursor from "@/components/ui/CustomCursor";
 import PageTransition from "@/components/animations/PageTransition";
+import ThemeApplier from "@/components/ui/ThemeApplier";
+import ThemeSwitcher from "@/components/ui/ThemeSwitcher";
+import ScrollController from "@/components/ui/ScrollController";
 
 const siteUrl = "https://prashantsingh.dev";
 
@@ -193,8 +196,11 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-bg text-zinc-200 antialiased">
+        <ThemeApplier />
+        <ScrollController />
         <CustomCursor />
         <Navbar />
+        <ThemeSwitcher />
         <PageTransition>{children}</PageTransition>
       </body>
     </html>
