@@ -206,6 +206,17 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "AI Governor",
+    description:
+      "AI governance and compliance platform for monitoring, auditing, and managing AI model behavior with policy enforcement and risk assessment dashboards.",
+    emoji: "🤖",
+    gradient: "from-amber-900 to-orange-900",
+    stack: ["TypeScript", "React", "Node.js", "AI/ML"],
+    github: "https://github.com/prashantsinghmangat/AIGovernor",
+    live: "#",
+    featured: true,
+  },
+  {
     title: "NexGenGram",
     description:
       "A modern Instagram clone with stories, posts, likes, comments, and user authentication. Full social media experience with real-time interactions and responsive design.",
@@ -214,7 +225,7 @@ export const projects: Project[] = [
     stack: ["React", "TypeScript", "Tailwind CSS", "Firebase"],
     github: "https://github.com/prashantsinghmangat/nexgenGram-Instagram-Clone",
     live: "https://nexgengram.netlify.app/",
-    featured: true,
+    featured: false,
   },
   {
     title: "Kanban Board",
@@ -225,7 +236,7 @@ export const projects: Project[] = [
     stack: ["React", "TypeScript", "DnD Kit", "Zustand"],
     github: "https://github.com/prashantsinghmangat/Prashant-Kanban-Board",
     live: "https://prashant-kanban-board.netlify.app/",
-    featured: true,
+    featured: false,
   },
   {
     title: "NexGenStocks",
@@ -247,17 +258,6 @@ export const projects: Project[] = [
     stack: ["React", "TypeScript", "Tailwind CSS", "Web Audio API"],
     github: "https://github.com/prashantsinghmangat/NexGenMusic",
     live: "https://nexgenmusic.netlify.app/",
-    featured: false,
-  },
-  {
-    title: "AI Governor",
-    description:
-      "AI governance and compliance platform for monitoring, auditing, and managing AI model behavior with policy enforcement and risk assessment dashboards.",
-    emoji: "🤖",
-    gradient: "from-amber-900 to-orange-900",
-    stack: ["TypeScript", "React", "Node.js", "AI/ML"],
-    github: "https://github.com/prashantsinghmangat/AIGovernor",
-    live: "#",
     featured: false,
   },
   {

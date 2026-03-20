@@ -4,32 +4,56 @@ import { motion } from "framer-motion";
 import SectionReveal from "@/components/animations/SectionReveal";
 import { useUIStore } from "@/store/uiStore";
 
-const pillars = [
+interface Pillar {
+  number: string;
+  headline: string;
+  points: string[];
+  metric: string;
+  icon: string;
+}
+
+const pillars: Pillar[] = [
   {
     number: "01",
     headline: "I ship at enterprise scale",
-    detail: "Led AngularJS → React migration across enterprise platforms without a single production disruption. Built Moglix, Tendershark, Tele-MANAS — systems serving 100K+ users.",
+    points: [
+      "AngularJS → React migration with zero production disruptions",
+      "Built Moglix, Tendershark, Tele-MANAS platforms",
+      "Systems serving 100,000+ users across India",
+    ],
     metric: "100K+ users served",
     icon: "🚀",
   },
   {
     number: "02",
     headline: "I engineer measurable performance",
-    detail: "SEO rankings up 20%. Page load speed improved 15%. Traffic increased 45% on Tendershark. Core Web Vitals: LCP 4.2s → 1.8s, CLS 0.3 → 0.05. These are auditable results.",
+    points: [
+      "SEO rankings improved 20% on Credlix",
+      "Page load speed up 15%, traffic up 45% on Tendershark",
+      "Core Web Vitals: LCP 4.2s → 1.8s, CLS 0.3 → 0.05",
+    ],
     metric: "SEO +20% · Speed +15%",
     icon: "⚡",
   },
   {
     number: "03",
     headline: "I automate with AI",
-    detail: "Built AI-powered PR review workflows and automated route migration using Claude Code and GPT. Reduced development effort by 40% across migration initiatives. Created Indexa MCP — cutting LLM token usage by 50–70%.",
+    points: [
+      "AI-powered PR review workflows via Claude Code & GPT",
+      "Automated route migration & parity validation",
+      "Built Indexa MCP — cutting LLM token usage by 50–70%",
+    ],
     metric: "40% dev effort saved",
     icon: "🤖",
   },
   {
     number: "04",
     headline: "I lead and architect",
-    detail: "Defined frontend architecture and coding standards across teams. Mentored junior developers into independent contributors. Built centralized component libraries used across enterprise shell architectures.",
+    points: [
+      "Defined frontend architecture & coding standards across teams",
+      "Mentored junior devs into independent contributors",
+      "Built 60+ component library for enterprise shell architecture",
+    ],
     metric: "60+ component system",
     icon: "🏛️",
   },
@@ -91,9 +115,14 @@ export default function WhyHireMeSection() {
                   </div>
                 </div>
 
-                <p className="text-sm leading-relaxed flex-1" style={{ color: "var(--text-muted)" }}>
-                  {p.detail}
-                </p>
+                <ul className="space-y-1.5 flex-1">
+                  {p.points.map((point) => (
+                    <li key={point} className="text-sm flex items-start gap-2" style={{ color: "var(--text-muted)" }}>
+                      <span className="mt-1.5 w-1 h-1 rounded-full shrink-0" style={{ background: "var(--accent)" }} />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
 
                 <div
                   className="self-start px-3 py-1 rounded-full text-xs font-mono font-semibold"

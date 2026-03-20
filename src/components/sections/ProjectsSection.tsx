@@ -105,24 +105,49 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
   );
 }
 
+const featuredProjects = projects.filter((p) => p.featured);
+const otherProjects = projects.filter((p) => !p.featured);
+
 export default function ProjectsSection() {
   return (
     <section id="projects" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
+        {/* Featured Projects */}
         <SectionReveal>
           <span className="font-mono text-xs text-violet-400 uppercase tracking-widest">
-            Portfolio
+            Flagship Work
           </span>
           <h2 className="font-display text-4xl sm:text-5xl font-black mt-2 mb-4">
-            Personal <span className="text-gradient-accent">Projects</span>
+            Featured <span className="text-gradient-accent">Projects</span>
           </h2>
           <p className="text-zinc-400 mb-12 max-w-2xl">
-            Open-source and side projects built to explore new technologies and solve real problems.
+            Production-grade systems and AI-powered tools built to solve real engineering problems.
           </p>
         </SectionReveal>
 
-        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project) => (
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-20">
+          {featuredProjects.map((project) => (
+            <StaggerItem key={project.title}>
+              <ProjectCard project={project} />
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+
+        {/* Other Projects */}
+        <SectionReveal>
+          <span className="font-mono text-xs text-zinc-500 uppercase tracking-widest">
+            Experiments &amp; Explorations
+          </span>
+          <h2 className="font-display text-3xl sm:text-4xl font-black mt-2 mb-4">
+            More <span className="text-gradient-accent">Projects</span>
+          </h2>
+          <p className="text-zinc-500 mb-10 max-w-2xl text-sm">
+            Side projects and experiments exploring new technologies, APIs, and design patterns.
+          </p>
+        </SectionReveal>
+
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {otherProjects.map((project) => (
             <StaggerItem key={project.title}>
               <ProjectCard project={project} />
             </StaggerItem>

@@ -77,7 +77,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
     >
       {/* Particle Background */}
       <ParticleCanvas />
@@ -127,7 +127,6 @@ export default function HeroSection() {
           transition={{ delay: 0.8 }}
           className="text-xl sm:text-2xl md:text-3xl font-sans font-light mb-10 h-10"
         >
-          <span className="text-zinc-400">I deliver </span>
           <TypingAnimation strings={personalInfo.typingStrings} />
         </motion.div>
 
@@ -168,7 +167,7 @@ export default function HeroSection() {
           </MagneticButton>
           <MagneticButton>
             <a
-              href="#projects"
+              href="#case-studies"
               className="inline-flex items-center px-7 py-3.5 rounded-full border border-white/15 text-white font-semibold text-sm hover:bg-white/5 transition-all"
             >
               View Case Studies

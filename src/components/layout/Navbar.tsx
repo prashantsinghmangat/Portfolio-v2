@@ -7,11 +7,11 @@ import { useScrollProgress } from "@/hooks/useScrollProgress";
 
 const navLinks = [
   { label: "Home", href: "#hero" },
-  { label: "Terminal", href: "#terminal" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
+  { label: "Why Me", href: "#why-hire-me" },
+  { label: "Case Studies", href: "#case-studies" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
+  { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ];
 
