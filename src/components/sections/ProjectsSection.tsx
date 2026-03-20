@@ -189,28 +189,7 @@ export default function ProjectsSection() {
   return (
     <section id="projects" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
-        {/* Personal Projects */}
-        <SectionReveal>
-          <span className="font-mono text-xs text-violet-400 uppercase tracking-widest">
-            Portfolio
-          </span>
-          <h2 className="font-display text-4xl sm:text-5xl font-black mt-2 mb-4">
-            Personal <span className="text-gradient-accent">Projects</span>
-          </h2>
-          <p className="text-zinc-400 mb-12 max-w-2xl">
-            Open-source and side projects built to explore new technologies and solve real problems.
-          </p>
-        </SectionReveal>
-
-        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
-          {projects.map((project) => (
-            <StaggerItem key={project.title}>
-              <ProjectCard project={project} />
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
-
-        {/* Industry / Client Work */}
+        {/* Industry / Client Work — shown first */}
         <SectionReveal>
           <span className="font-mono text-xs text-violet-400 uppercase tracking-widest">
             Professional Work
@@ -240,6 +219,29 @@ export default function ProjectsSection() {
             </p>
           </div>
         </SectionReveal>
+
+        {/* Personal Projects — shown after */}
+        <SectionReveal>
+          <div className="mt-24">
+            <span className="font-mono text-xs text-violet-400 uppercase tracking-widest">
+              Portfolio
+            </span>
+            <h2 className="font-display text-4xl sm:text-5xl font-black mt-2 mb-4">
+              Personal <span className="text-gradient-accent">Projects</span>
+            </h2>
+            <p className="text-zinc-400 mb-12 max-w-2xl">
+              Open-source and side projects built to explore new technologies and solve real problems.
+            </p>
+          </div>
+        </SectionReveal>
+
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project) => (
+            <StaggerItem key={project.title}>
+              <ProjectCard project={project} />
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
       </div>
     </section>
   );

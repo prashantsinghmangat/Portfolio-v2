@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 import { useScrollProgress } from "@/hooks/useScrollProgress";
 
 const navLinks = [
@@ -37,6 +37,8 @@ export default function Navbar() {
       </div>
 
       <motion.nav
+        role="navigation"
+        aria-label="Main navigation"
         initial={{ y: -80 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -72,6 +74,15 @@ export default function Navbar() {
 
           {/* Right side */}
           <div className="flex items-center gap-4">
+            <a
+              href="/Prashant_Singh_Resume.pdf"
+              download="Prashant_Singh_Resume.pdf"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono rounded-md bg-accent/10 text-accent border border-accent/20 hover:bg-accent/20 hover:border-accent/40 transition-all duration-200"
+              style={{ cursor: "pointer" }}
+            >
+              <Download size={13} />
+              Resume
+            </a>
             <span className="hidden sm:inline-flex items-center gap-1.5 text-xs font-mono text-green-400">
               <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
               Available
@@ -81,6 +92,8 @@ export default function Navbar() {
             <button
               className="md:hidden text-zinc-400 hover:text-white"
               onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={mobileOpen}
               style={{ cursor: "pointer" }}
             >
               {mobileOpen ? <X size={20} /> : <Menu size={20} />}
@@ -113,6 +126,19 @@ export default function Navbar() {
                   {link.label}
                 </motion.a>
               ))}
+              <motion.a
+                href="/Prashant_Singh_Resume.pdf"
+                download="Prashant_Singh_Resume.pdf"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: navLinks.length * 0.08 }}
+                className="inline-flex items-center gap-2 mt-4 px-5 py-2.5 text-base font-mono rounded-md bg-accent/10 text-accent border border-accent/30 hover:bg-accent/20 transition-all"
+                onClick={() => setMobileOpen(false)}
+                style={{ cursor: "pointer" }}
+              >
+                <Download size={16} />
+                Download Resume
+              </motion.a>
             </div>
           </motion.div>
         )}

@@ -184,6 +184,17 @@ export const certifications: Certification[] = [
 
 export const projects: Project[] = [
   {
+    title: "Indexa MCP",
+    description:
+      "Local-first MCP server-based code intelligence engine that integrates with AI tools to deliver structured, dependency-aware context using hybrid search (semantic + keyword + graph), reducing LLM token usage by 50–70% and improving developer productivity.",
+    emoji: "🧠",
+    gradient: "from-violet-900 to-fuchsia-900",
+    stack: ["TypeScript", "MCP", "AI/ML", "Graph Search"],
+    github: "https://github.com/prashantsinghmangat/Indexa",
+    live: "https://github.com/prashantsinghmangat/Indexa",
+    featured: true,
+  },
+  {
     title: "TraceBug AI",
     description:
       "AI-powered bug tracking and debugging platform. Automatically captures, classifies, and resolves bugs with intelligent root cause analysis for modern web applications.",
@@ -275,59 +286,69 @@ export const projects: Project[] = [
 
 export const industryProjects: IndustryProject[] = [
   {
+    title: "Safeguard Properties",
+    description:
+      "USA's largest field services company for mortgage & real estate — built enterprise dashboards, property inspection workflows, and vendor management modules.",
+    emoji: "🏠",
+    gradient: "from-blue-900 to-indigo-900",
+    stack: ["React", "TypeScript", ".Net", "REST API"],
+    live: "https://safeguardproperties.com/",
+    category: "Enterprise SaaS",
+  },
+  {
+    title: "TP Dispatch",
+    description:
+      "Transit logistics & dispatch management platform — developed real-time route optimization, driver scheduling, and fleet tracking interfaces.",
+    emoji: "🚚",
+    gradient: "from-cyan-900 to-sky-900",
+    stack: ["React", "TypeScript", "Node.js", "REST API"],
+    live: "https://www.transit-partners.co/",
+    category: "Logistics",
+  },
+  {
+    title: "Moglix",
+    description:
+      "India's largest B2B industrial eCommerce platform — revamped L2/L3 pages with Angular, integrated responsive widgets with RESTful APIs for 30% UX improvement.",
+    emoji: "🏭",
+    gradient: "from-slate-900 to-zinc-900",
+    stack: ["Angular", "TypeScript", "REST APIs", "Webpack"],
+    live: "https://www.moglix.com/",
+    category: "eCommerce",
+  },
+  {
     title: "TenderShark",
     description:
-      "Enterprise tender & procurement management platform helping businesses discover, track, and bid on government and private tenders in real time.",
+      "Enterprise tender & procurement platform — led end-to-end with Angular SSR, enhanced UI and increased traffic by 45%.",
     emoji: "🦈",
     gradient: "from-blue-900 to-cyan-900",
-    stack: ["React", "TypeScript", "Node.js", "REST API"],
+    stack: ["Angular SSR", "TypeScript", "REST API", "Jenkins"],
     live: "https://www.tendershark.com/",
     category: "Enterprise SaaS",
   },
   {
+    title: "Credlix",
+    description:
+      "Supply chain finance platform by Moglix — optimized with ReactJS and Next.js, improving SEO rankings by 20% and page load speed by 15%.",
+    emoji: "💳",
+    gradient: "from-emerald-900 to-teal-900",
+    stack: ["React", "Next.js", "TypeScript", "SSR"],
+    live: "https://www.credlix.com/",
+    category: "FinTech",
+  },
+  {
     title: "LetsTalk Life Forum",
     description:
-      "Mental health community platform offering peer support forums, expert articles, and anonymous discussions to promote emotional well-being.",
+      "NIMHANS mental health platform — developed frontend with Angular 17 and Figma, enhancing accessibility by 40% with responsive design.",
     emoji: "💬",
     gradient: "from-rose-900 to-pink-900",
-    stack: ["React", "Node.js", "MongoDB", "Socket.io"],
-    live: "https://www.letstalklifeforum.in/home",
-    category: "Healthcare",
-  },
-  {
-    title: "Tele-MANAS",
-    description:
-      "Government telemedicine platform by Ministry of Health & Family Welfare enabling mental health teleconsultations across India.",
-    emoji: "🏥",
-    gradient: "from-green-900 to-teal-900",
-    stack: ["Angular", "TypeScript", "REST API", "WebRTC"],
-    live: "https://telemanas.mohfw.gov.in/home",
-    category: "Govt. / Healthcare",
-  },
-  {
-    title: "The Paperless",
-    description:
-      "Digital document management solution enabling organizations to go paperless with smart workflows, e-signatures, and secure file storage.",
-    emoji: "📄",
-    gradient: "from-yellow-900 to-amber-900",
-    stack: ["React", "TypeScript", "Node.js", "AWS"],
-    live: "https://the-paperless.netlify.app/",
-    category: "Productivity",
-  },
-  {
-    title: "Yatharth Eye Care",
-    description:
-      "Healthcare website for a leading eye care hospital chain featuring appointment booking, doctor profiles, treatment info, and patient resources.",
-    emoji: "👁️",
-    gradient: "from-indigo-900 to-violet-900",
-    stack: ["React", "TypeScript", "Tailwind CSS", "CMS"],
-    live: "https://www.yathartheyecare.com/",
+    stack: ["Angular 17", "TypeScript", "Figma", "REST API"],
+    live: "https://www.letstalklifeforum.in/",
     category: "Healthcare",
   },
   {
     title: "e-MANAS Karnataka",
     description:
-      "Karnataka government mental health digital platform providing assessment tools, resource directories, and access to mental health services.",
+      "Karnataka govt. mental health portal — integrated ABHA card ensuring secure authentication for 10,000+ patient records.",
     emoji: "🧠",
     gradient: "from-orange-900 to-red-900",
     stack: ["Angular", "TypeScript", "REST API", "Node.js"],
@@ -335,14 +356,34 @@ export const industryProjects: IndustryProject[] = [
     category: "Govt. Portal",
   },
   {
-    title: "Moglix",
+    title: "Tele-MANAS",
     description:
-      "India's largest B2B industrial eCommerce platform — contributed to procurement workflows, product listing engines, and supplier integrations.",
-    emoji: "🏭",
-    gradient: "from-slate-900 to-zinc-900",
-    stack: ["React", "TypeScript", "Redux", "Node.js"],
-    live: "https://www.moglix.com/",
-    category: "eCommerce",
+      "Government telemedicine platform (MOHFW) — built frontend with Angular 16 enabling mental health teleconsultations for 100,000+ users across India.",
+    emoji: "🏥",
+    gradient: "from-green-900 to-teal-900",
+    stack: ["Angular 16", "TypeScript", "REST API", "WebRTC"],
+    live: "https://telemanas.mohfw.gov.in/home",
+    category: "Govt. / Healthcare",
+  },
+  {
+    title: "Yatharth Eye Care",
+    description:
+      "Eye care hospital website with appointment booking, doctor profiles, treatment info, and patient management system.",
+    emoji: "👁️",
+    gradient: "from-indigo-900 to-violet-900",
+    stack: ["PHP", "MySQL", "HTML/CSS", "JavaScript"],
+    live: "https://www.yathartheyecare.com/",
+    category: "Healthcare",
+  },
+  {
+    title: "The Paperless",
+    description:
+      "Digital document management solution — smart workflows, e-signatures, and secure file storage for paperless organizations.",
+    emoji: "📄",
+    gradient: "from-yellow-900 to-amber-900",
+    stack: ["React", "TypeScript", "Node.js", "AWS"],
+    live: "https://the-paperless.netlify.app/",
+    category: "Productivity",
   },
 ];
 
@@ -449,6 +490,9 @@ export const terminalCommands: Record<string, TerminalCommand> = {
     lines: [
       { text: "→ Projects", type: "header" },
       { text: "", type: "normal" },
+      { text: "  🧠 Indexa MCP — AI code intelligence with hybrid search", type: "info" },
+      { text: "     TypeScript · MCP · AI/ML · Graph Search", type: "normal" },
+      { text: "", type: "normal" },
       { text: "  🐛 TraceBug AI — AI-powered bug tracking & debugging", type: "info" },
       { text: "     TypeScript · React · AI/ML · Node.js", type: "normal" },
       { text: "", type: "normal" },
@@ -475,13 +519,16 @@ export const terminalCommands: Record<string, TerminalCommand> = {
       { text: "", type: "normal" },
       { text: "  ── Industry & Client Work ──", type: "warn" },
       { text: "", type: "normal" },
-      { text: "  🦈 TenderShark — Enterprise tender management platform", type: "info" },
-      { text: "  💬 LetsTalk Life Forum — Mental health community platform", type: "info" },
-      { text: "  🏥 Tele-MANAS — Govt. mental health telemedicine (MOHFW)", type: "info" },
-      { text: "  📄 The Paperless — Digital document management solution", type: "info" },
-      { text: "  👁️ Yatharth Eye Care — Hospital chain website & booking", type: "info" },
-      { text: "  🧠 e-MANAS Karnataka — Karnataka Govt. mental health portal", type: "info" },
+      { text: "  🏠 Safeguard Properties — US mortgage field services platform", type: "info" },
+      { text: "  🚚 TP Dispatch — Transit logistics & fleet dispatch", type: "info" },
       { text: "  🏭 Moglix — B2B industrial eCommerce platform", type: "info" },
+      { text: "  🦈 TenderShark — Enterprise tender management platform", type: "info" },
+      { text: "  💳 Credlix — Supply chain finance platform", type: "info" },
+      { text: "  💬 LetsTalk Life Forum — NIMHANS mental health platform", type: "info" },
+      { text: "  🧠 e-MANAS Karnataka — Karnataka Govt. mental health portal", type: "info" },
+      { text: "  🏥 Tele-MANAS — Govt. mental health telemedicine (100K+ users)", type: "info" },
+      { text: "  👁️ Yatharth Eye Care — Hospital chain website & booking", type: "info" },
+      { text: "  📄 The Paperless — Digital document management solution", type: "info" },
     ],
   },
   skills: {
@@ -564,6 +611,15 @@ export const githubStats = {
 };
 
 export const featuredRepos = [
+  {
+    name: "Indexa",
+    description: "Local-first MCP server code intelligence engine with hybrid search — reduces LLM token usage by 50–70%",
+    language: "TypeScript",
+    languageColor: "#3178c6",
+    stars: 12,
+    forks: 3,
+    url: "https://github.com/prashantsinghmangat/Indexa",
+  },
   {
     name: "TraceBug-ai",
     description: "AI-powered bug tracking and debugging platform",
