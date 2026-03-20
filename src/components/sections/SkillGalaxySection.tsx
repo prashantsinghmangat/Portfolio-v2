@@ -19,7 +19,7 @@ const categories: { id: Category; label: string }[] = [
 function SkillCard({ skill }: { skill: Skill }) {
   return (
     <motion.div
-      className="group relative p-5 rounded-2xl border border-white/8 bg-white/[0.03] hover:border-accent/30 transition-all duration-300"
+      className="group relative p-3 sm:p-5 rounded-2xl border border-white/8 bg-white/[0.03] hover:border-accent/30 transition-all duration-300"
       whileHover={{ y: -6, boxShadow: "0 0 30px rgba(124,108,252,0.15)" }}
     >
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />

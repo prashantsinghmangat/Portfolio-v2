@@ -95,7 +95,7 @@ export default function CaseStudiesSection() {
                     {study.title}
                   </h3>
 
-                  <div className="grid sm:grid-cols-3 gap-6">
+                  <div className="grid sm:grid-cols-3 gap-4 sm:gap-6">
                     {/* Problem */}
                     <div>
                       <h4

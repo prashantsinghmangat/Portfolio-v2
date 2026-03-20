@@ -28,7 +28,7 @@ export default function ExperienceSection() {
 
         <div ref={containerRef} className="relative">
           {/* Animated timeline line */}
-          <div className="absolute left-[19px] sm:left-[23px] top-0 bottom-0 w-px bg-white/5">
+          <div className="absolute left-[15px] sm:left-[23px] top-0 bottom-0 w-px bg-white/5">
             <motion.div
               className="w-full bg-gradient-to-b from-accent via-cyan-400 to-green-400 origin-top"
               style={{ height: lineHeight }}
@@ -39,13 +39,13 @@ export default function ExperienceSection() {
             {experiences.map((exp, i) => (
               <SectionReveal key={i} delay={i * 0.15} direction="left">
                 <motion.div
-                  className="relative pl-12 sm:pl-16 group"
+                  className="relative pl-10 sm:pl-16 group"
                   whileHover={{ x: 6 }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
                   {/* Timeline dot */}
                   <div
-                    className="absolute left-2.5 sm:left-3.5 top-1 w-4 h-4 rounded-full border-2"
+                    className="absolute left-1.5 sm:left-3.5 top-1 w-4 h-4 rounded-full border-2"
                     style={{
                       borderColor: exp.color,
                       boxShadow: `0 0 12px ${exp.color}40`,

@@ -44,7 +44,7 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
       <div className="absolute inset-0 bg-gradient-to-b from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
 
       {/* Gradient thumbnail */}
-      <div className={`h-32 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative`}>
+      <div className={`h-24 sm:h-32 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative`}>
         <span className="text-4xl">{project.emoji}</span>
         {project.featured && (
           <span className="absolute top-3 right-3 px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold bg-accent text-white">

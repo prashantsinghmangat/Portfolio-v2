@@ -48,11 +48,11 @@ export default function ContactSection() {
         </SectionReveal>
 
         <SectionReveal delay={0.1}>
-          <h2 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mt-4 mb-6 leading-tight">
-            Let&apos;s Build
-            <br />
-            <span className="text-gradient-accent">Something</span>
-            <br />
+          <h2 className="font-display text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mt-4 mb-6 leading-tight">
+            Let&apos;s Build{" "}
+            <span className="sm:block" />
+            <span className="text-gradient-accent">Something</span>{" "}
+            <span className="sm:block" />
             Together
           </h2>
         </SectionReveal>

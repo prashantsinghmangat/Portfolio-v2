@@ -125,7 +125,7 @@ export default function HeroSection() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.8 }}
-          className="text-xl sm:text-2xl md:text-3xl font-sans font-light mb-10 h-10"
+          className="text-lg sm:text-2xl md:text-3xl font-sans font-light mb-10 h-8 sm:h-10"
         >
           <TypingAnimation strings={personalInfo.typingStrings} />
         </motion.div>
@@ -135,11 +135,11 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1 }}
-          className="flex justify-center gap-8 sm:gap-16 mb-12"
+          className="flex justify-center gap-4 sm:gap-16 mb-12"
         >
           {stats.map((stat) => (
             <div key={stat.label} ref={stat.ref} className="text-center">
-              <div className="text-3xl sm:text-4xl font-display font-black text-gradient-accent">
+              <div className="text-2xl sm:text-4xl font-display font-black text-gradient-accent">
                 {stat.count}
                 {stat.suffix}
               </div>

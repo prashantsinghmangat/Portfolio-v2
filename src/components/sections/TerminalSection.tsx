@@ -285,7 +285,7 @@ export default function TerminalSection() {
                     onClick={() => runCommand(cmd)}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-3 py-1 rounded-md text-xs font-mono transition-all"
+                    className="px-3 py-2 sm:py-1 rounded-md text-xs font-mono transition-all min-h-[44px] sm:min-h-0"
                     style={{
                       color: "var(--text-muted)",
                       border: "1px solid var(--border)",

@@ -37,7 +37,7 @@ function IndustryCard({ project }: { project: typeof industryProjects[0] }) {
     >
       <div className="absolute inset-0 bg-gradient-to-b from-violet-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
 
-      <div className={`h-28 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative`}>
+      <div className={`h-20 sm:h-28 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative`}>
         <span className="text-4xl">{project.emoji}</span>
         <span className="absolute top-3 left-3 px-2 py-0.5 rounded-full text-[10px] font-mono font-medium bg-black/40 text-zinc-300 backdrop-blur-sm">
           {project.category}
