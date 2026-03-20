@@ -79,12 +79,12 @@ export const personalInfo = {
     { label: "Projects Built", value: 35, suffix: "+" },
   ],
   typingStrings: [
-    "High-Performance UIs",
-    "Scalable React Architectures",
-    "AI-Powered Automations",
-    "Enterprise Web Platforms",
-    "Angular → React Migrations",
-    "Full Stack Solutions",
+    "Systems that Scale to 100K+ Users",
+    "AI Tools that Cut Dev Effort by 40%",
+    "Enterprise-Grade React Architectures",
+    "AngularJS → React Migrations at Scale",
+    "Performance Wins: LCP 4.2s → 1.8s",
+    "Developer Tooling & Infrastructure",
   ],
   floatingTechs: ["React", "Next.js", "Angular", "TypeScript", "AI Tools"],
 } as const;
@@ -186,10 +186,10 @@ export const projects: Project[] = [
   {
     title: "Indexa MCP",
     description:
-      "Local-first MCP server-based code intelligence engine that integrates with AI tools to deliver structured, dependency-aware context using hybrid search (semantic + keyword + graph), reducing LLM token usage by 50–70% and improving developer productivity.",
+      "AI infrastructure for LLM context optimization. A local-first MCP server that delivers dependency-aware code intelligence via hybrid search (semantic + keyword + graph), reducing LLM token consumption by 50–70% — turning expensive AI queries into fast, precise, cost-effective operations.",
     emoji: "🧠",
     gradient: "from-violet-900 to-fuchsia-900",
-    stack: ["TypeScript", "MCP", "AI/ML", "Graph Search"],
+    stack: ["TypeScript", "MCP Protocol", "Hybrid Search", "LLM Optimization"],
     github: "https://github.com/prashantsinghmangat/Indexa",
     live: "https://github.com/prashantsinghmangat/Indexa",
     featured: true,

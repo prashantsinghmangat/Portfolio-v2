@@ -96,7 +96,7 @@ export default function HeroSection() {
         >
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
           <span className="text-sm font-mono text-zinc-300">
-            Senior Frontend Architect · Full Stack Developer
+            Available for Senior / Lead / Architect Roles
           </span>
         </motion.div>
 
@@ -105,10 +105,20 @@ export default function HeroSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.8 }}
-          className="font-display font-black text-5xl sm:text-7xl md:text-8xl leading-none mb-6 text-gradient"
+          className="font-display font-black text-5xl sm:text-7xl md:text-8xl leading-none mb-4 text-gradient"
         >
           {personalInfo.name}
         </motion.h1>
+
+        {/* Headline */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+          className="text-base sm:text-lg text-zinc-400 max-w-2xl mx-auto mb-6"
+        >
+          I build scalable frontend systems and AI-powered tools that ship faster, cost less, and serve millions.
+        </motion.p>
 
         {/* Typing */}
         <motion.div
@@ -117,7 +127,7 @@ export default function HeroSection() {
           transition={{ delay: 0.8 }}
           className="text-xl sm:text-2xl md:text-3xl font-sans font-light mb-10 h-10"
         >
-          <span className="text-zinc-400">I build </span>
+          <span className="text-zinc-400">I deliver </span>
           <TypingAnimation strings={personalInfo.typingStrings} />
         </motion.div>
 
@@ -150,18 +160,27 @@ export default function HeroSection() {
         >
           <MagneticButton>
             <a
-              href="#projects"
+              href="#contact"
               className="inline-flex items-center px-7 py-3.5 rounded-full bg-gradient-to-r from-accent to-cyan-500 text-white font-semibold text-sm transition-all hover:shadow-lg hover:shadow-accent/25"
             >
-              View Projects
+              Hire Me for Senior Roles
             </a>
           </MagneticButton>
           <MagneticButton>
             <a
-              href="#contact"
+              href="#projects"
               className="inline-flex items-center px-7 py-3.5 rounded-full border border-white/15 text-white font-semibold text-sm hover:bg-white/5 transition-all"
             >
-              Contact Me
+              View Case Studies
+            </a>
+          </MagneticButton>
+          <MagneticButton>
+            <a
+              href="/Prashant_Singh_Resume.pdf"
+              download="Prashant_Singh_Resume.pdf"
+              className="inline-flex items-center px-7 py-3.5 rounded-full border border-accent/25 text-accent font-semibold text-sm hover:bg-accent/5 transition-all"
+            >
+              Download Resume
             </a>
           </MagneticButton>
         </motion.div>

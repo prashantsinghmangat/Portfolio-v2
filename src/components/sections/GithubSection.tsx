@@ -23,11 +23,14 @@ export default function GithubSection() {
       <div className="max-w-5xl mx-auto">
         <SectionReveal>
           <span className="font-mono text-xs text-violet-400 uppercase tracking-widest">
-            Activity
+            Open Source
           </span>
-          <h2 className="font-display text-4xl sm:text-5xl font-black mt-2 mb-12">
+          <h2 className="font-display text-4xl sm:text-5xl font-black mt-2 mb-4">
             GitHub <span className="text-gradient-accent">Activity</span>
           </h2>
+          <p className="text-zinc-400 mb-12 max-w-2xl">
+            Active open-source contributor. Built developer tooling ecosystem — from AI-powered code intelligence (Indexa) to automated debugging infrastructure (TraceBug).
+          </p>
         </SectionReveal>
 
         {/* Stats grid */}
